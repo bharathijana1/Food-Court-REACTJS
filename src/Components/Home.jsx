@@ -44,7 +44,7 @@ const Home = ({ cart, setCart }) => {
   return (
     <div className='py-4 h-auto'>
       {/* Product List */}
-      <div className='flex gap-6 justify-center p-2 md:m-4 flex-wrap'>
+      <div className='grid grid-cols-2 md:flex p-1 gap-2 md:gap-6 justify-center md:p-2 md:m-4 flex-wrap'>
         {currentProducts.map((data, index) => (
           <div
             key={index}
@@ -52,10 +52,10 @@ const Home = ({ cart, setCart }) => {
           >
             <img
               src={data.img}
-              alt={data.alt || 'Product image'}
-              className='w-32 lg:w-72 h-32 lg:h-72'
+              alt={data.alt}
+              className='w-full lg:w-72 h-32 lg:h-72'
             />
-            <p className='capitalize font-medium text-xl p-3'>{data.name}</p>
+            <p className='capitalize font-medium text-xl py-1'>{data.name}</p>
             <p className='font-medium text-xl p-1'>
               Price RS. <strong>{data.price}</strong>
             </p>
